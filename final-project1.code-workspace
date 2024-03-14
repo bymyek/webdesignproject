@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"name": "final-project1",
+			"path": "."
+		},
+		{
+			"name": "bs5",
+			"path": "../code tests/bs5"
+		},
+		{
+			"name": "java-script learning",
+			"path": "../java-script learning"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "final-project1"
+	}
+}

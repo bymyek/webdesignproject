@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="source/styles/maincss.css">
+    <link rel="stylesheet" href="source/styles/bgvideo.css">
+    <link rel="stylesheet" href="source/styles/mform.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="source/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="source/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="source/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="source/favicon_io/site.webmanifest">
+    <title>Byemyek Airlines</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html">Byemyek Airlines</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="aboutus.html">About Us</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Gallery
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="photogal.html">Gallery</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="blog.html">Our Blog</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="portfolio.html">Portfolio</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <section>
+        <div class="bgvideo">
+            <video src="source/video/pexels_videos_2141798 (2160p).mp4" type="video/mp4" muted loop autoplay></video>
+            <!-- <div class="effect"></div> -->
+            <div class="video-text">
+                <h1>Book your dream flight</h1>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+        </div>
+        <div class="container-fluid mt-4">
+            <div class="row">
+                <div class="col-lg-2">
+
+                </div>
+                
+                <div class="col-lg-8">
+                  <div class="container-fluid main-form">
+                    <div class="row justify-content-center">
+                      <div class="hedtext">
+                        <h2>From. To. When. Book.</h2>
+                        <p>As simple as it should be.</p>
+                      </div>
+                      <div class="col-md-8"> <!--Booking form-->
+                        <form class="my-5 needs-validation" novalidate>
+                          <div class="form-floating mb-3">
+                            <input class="form-control" id="FromCity" placeholder="Type to search..." oninput="showOptions()" list="fromListOptions" autocomplete="off">
+                            <label for="FromCity" class="form-label">From (city)</label>
+                            <datalist id="fromListOptions">
+                                <option value="Belgrade">
+                                <option value="Paris">
+                                <option value="Tokyo">
+                                <option value="Rome">
+                                <option value="New York">
+                                <option value="Barcelona">
+                                <option value="Sydney">
+                                <option value="Istanbul">
+                                <option value="Rio de Janeiro">
+                                <option value="Bangkok">
+                                
+                            </datalist> 
+                            <div class="invalid-feedback">
+                              Please, enter a valid city
+                            </div>                        
+                          </div>
+                          <div class="form-floating mb-3">
+                            <input class="form-control" id="ToCity" placeholder="Type to search..." oninput="showOptions()" list="fromListOptions" autocomplete="off">
+                            <label for="ToCity" class="form-label">To (city)</label>
+                            <datalist id="toListOptions">
+                                <option value="Belgrade">
+                                <option value="Paris">
+                                <option value="Tokyo">
+                                <option value="Rome">
+                                <option value="New York">
+                                <option value="Barcelona">
+                                <option value="Sydney">
+                                <option value="Istanbul">
+                                <option value="Rio de Janeiro">
+                                <option value="Bangkok">
+                                
+                            </datalist>   
+                            <div class="invalid-feedback">
+                              Please, enter a valid city
+                            </div>                        
+                          </div>
+                          <div class="form-floating mb-3">
+                            <input type="date" class="form-control" id="DepartDate" placeholder="Когда">
+                            <label for="date">Depart</label>
+                            <div class="invalid-feedback">
+                              Date is invalid, please, choose a date
+                            </div> 
+                          </div>
+                          <div class="form-floating mb-3">
+                            <input type="date" class="form-control" id="ReturnDate" placeholder="Когда">
+                            <label for="date">Return</label>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" id="one-way-ticket">
+                              <label class="form-check-label" for="one-way-ticket">
+                                One way ticket
+                              </label>
+                            </div>
+                            <div class="invalid-feedback">
+                              Date is invalid, please enter a valid date, or mark the box
+                            </div> 
+                          </div>
+                          
+                          <div class="input-group mb-3">
+                            <button class="btn btn-outline-secondary" type="button" id="minus-btn">-</button>
+                            <div class="form-floating mb-0">
+                              <input type="text" class="form-control text-center" id="passenger-count" placeholder="passenger-count" value="1" required oninput="if (this.value === '') { this.value = '1'; }">
+                              <label for="passenger-count">Passengers</label>
+                            </div>
+                            <button class="btn btn-outline-secondary" type="button" id="plus-btn">+</button>
+                          </div>
+                          <div class="form-floating mb-3">
+                            <select class="form-select" id="CabinClass" aria-label="Class">
+                              <option selected value="econom">Economy</option>
+                              <option value="business">Business</option>
+                              <option value="first">First class</option>
+                            </select>
+                            <label for="class">Cabin class</label>
+                          </div>
+                          <button type="submit" class="btn btn-primary w-100" id="TicketFindSubmit">Find tickets</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="hedtext mt-4">
+                    <h2>Choose your destination</h2>
+                  </div>
+
+                  <div class="row">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                      <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                              class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                              aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                              aria-label="Slide 3"></button>
+  
+                      </div>
+                      <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <a href="photogal.html">
+                              <img src="source/images/pexels-leah-kelley-3935702.jpg" class="d-block w-100" alt="...">
+                              <div class="carousel-caption d-none d-md-block">
+                                <h3>Can't decide where to go?</h3>
+                                <p style="font-size: large;">Find your dream on our blog and gallery!</p>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="carousel-item">
+                            <a href="">
+                              <img src="source/images/pexels-nappy-1058959.jpg" class="d-block w-100" alt="...">
+                              <div class="carousel-caption d-none d-md-block">
+                                <h3>Can't decide where to go?</h3>
+                                <p style="font-size: large;">Find your dream on our blog and gallery!</p>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="carousel-item">
+                            <a href="">
+                              <img src="source/images/pexels-porapak-apichodilok-346885.jpg" class="d-block w-100" alt="...">
+                              <div class="carousel-caption d-none d-md-block">
+                                <h3>Can't decide where to go?</h3>
+                                <p style="font-size: large;">Find your dream on our blog and gallery!</p>
+                              </div>
+                            </a>
+                          </div>
+                      </div>
+                      <button class="carousel-control-prev" type="button"
+                          data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button"
+                          data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                      </button>
+                  </div>
+                  
+                  
+                
+                  <div class="hedtext" style="margin-top: 64px;">
+                    <p style="font-size: 2em;">Popular flights right now</p>
+                  </div>
+
+                  <div class="row des-sug"> <!--Popular destinations-->
+                    <div class="card-group">
+
+                      <div class="col-lg-4 mt-5">
+                        <div class="card h-100" style="width: 18rem;">
+                          <img src="source/images/paris0.jpeg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 class="card-title">Paris</h5>
+                            <p class="card-text">Paris - The capital of France is renowned for its romantic ambiance, iconic landmarks such as the Eiffel Tower and Notre-Dame Cathedral, and world-class art museums like the Louvre. Visitors can enjoy leisurely strolls along the Seine River, explore charming neighborhoods like Montmartre, and indulge in delicious French pastries at sidewalk cafes.</p>
+                          </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Romantic</li>
+                            <li class="list-group-item">Art</li>
+                            <li class="list-group-item">Fashion</li>
+                          </ul>
+                          <div class="card-body">
+                            <a href="photogal.html" class="card-link">Gallery</a>
+                            <a href="blog.html" class="card-link">Our blog</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 mt-5">
+                        <div class="card h-100" style="width: 18rem;">
+                          <img src="source/images/jezael-melgoza-layMbSJ3YOE-unsplash.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 class="card-title">Tokyo</h5>
+                            <p class="card-text">Tokyo - The vibrant capital of Japan offers a fascinating blend of ancient traditions and modern innovations. Travelers can explore historic temples and shrines in Asakusa, shop for the latest gadgets in Akihabara, and experience the bustling nightlife of Shinjuku.</p>
+                          </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Technology</li>
+                            <li class="list-group-item">Tradition</li>
+                            <li class="list-group-item">Anime</li>
+                          </ul>
+                          <div class="card-body">
+                            <a href="photogal.html" class="card-link">Gallery</a>
+                            <a href="blog.html" class="card-link">Our blog</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 mt-5">
+                        <div class="card h-100" style="width: 18rem;">
+                          <img src="source/images/caleb-miller-0Bs3et8FYyg-unsplash.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 class="card-title">Rome</h5>
+                            <p class="card-text">Rome - Known as the Eternal City, Rome is a treasure trove of ancient ruins, Renaissance architecture, and mouthwatering cuisine. Visitors can marvel at iconic landmarks such as the Colosseum and Vatican City, toss a coin into the Trevi Fountain for good luck, and savor authentic Italian pasta and gelato.</p>
+                          </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">History</li>
+                            <li class="list-group-item">Cuisine</li>
+                            <li class="list-group-item">Architecture</li>
+                          </ul>
+                          <div class="card-body">
+                            <a href="photogal.html" class="card-link">Gallery</a>
+                            <a href="blog.html" class="card-link">Our blog</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 mt-5">
+                        <div class="card h-100" style="width: 18rem;">
+                          <img src="source/images/emiliano-bar-kheTI8pIywU-unsplash.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 class="card-title">New York</h5>
+                            <p class="card-text">New York City - The Big Apple is a melting pot of cultures, offering world-class museums, Broadway shows, and diverse culinary experiences. Travelers can take in breathtaking views from the top of the Empire State Building, stroll through Central Park, and explore trendy neighborhoods like Greenwich Village and Williamsburg.</p>
+                          </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Entertainment</li>
+                            <li class="list-group-item">Skyscrapers</li>
+                            <li class="list-group-item">Central Par</li>
+                          </ul>
+                          <div class="card-body">
+                            <a href="photogal.html" class="card-link">Gallery</a>
+                            <a href="blog.html" class="card-link">Our blog</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 mt-5">
+                        <div class="card h-100" style="width: 18rem;">
+                          <img src="source/images/logan-armstrong-hVhfqhDYciU-unsplash.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 class="card-title">Barcelona</h5>
+                            <p class="card-text">Barcelona - The capital of Catalonia is famous for its unique architecture, vibrant street life, and beautiful Mediterranean beaches. Visitors can admire the surreal creations of Antoni Gaudí at landmarks like the Sagrada Familia, sample tapas and sangria in lively markets, and soak up the sun on the shores of Barceloneta Beach.</p>
+                          </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Gaudí</li>
+                            <li class="list-group-item">Tapas</li>
+                            <li class="list-group-item">Beaches</li>
+                          </ul>
+                          <div class="card-body">
+                            <a href="photogal.html" class="card-link">Gallery</a>
+                            <a href="blog.html" class="card-link">Our blog</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 mt-5">
+                        <div class="card h-100" style="width: 18rem;">
+                          <img src="source/images/jamie-davies-FXEaV3aEQW8-unsplash.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 class="card-title">Sydney</h5>
+                            <p class="card-text">Sydney - With its stunning harbor, iconic landmarks, and laid-back beach lifestyle, Sydney is a must-visit destination in Australia. Travelers can climb the Sydney Harbour Bridge for panoramic views, explore the historic Rocks district, and relax on the sandy shores of Bondi Beach.</p>
+                          </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Opera House</li>
+                            <li class="list-group-item">Surfing</li>
+                            <li class="list-group-item">Harbour</li>
+                          </ul>
+                          <div class="card-body">
+                            <a href="photogal.html" class="card-link">Gallery</a>
+                            <a href="blog.html" class="card-link">Our blog</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 mt-5">
+                        <div class="card h-100" style="width: 18rem;">
+                          <img src="source/images/engin-yapici-WA1u0scVLZU-unsplash.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 class="card-title">Istanbul</h5>
+                            <p class="card-text">Istanbul - Straddling two continents, Europe and Asia, Istanbul is a city steeped in history and culture. Visitors can explore ancient sites like the Hagia Sophia and Blue Mosque, shop for spices and souvenirs at the Grand Bazaar, and cruise along the Bosphorus Strait for stunning views of the city skyline.</p>
+                          </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">History</li>
+                            <li class="list-group-item">Culture</li>
+                            <li class="list-group-item">Bazaars</li>
+                          </ul>
+                          <div class="card-body">
+                            <a href="photogal.html" class="card-link">Gallery</a>
+                            <a href="blog.html" class="card-link">Our blog</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 mt-5">
+                        <div class="card h-100" style="width: 18rem;">
+                          <img src="source/images/raphael-nogueira-CErddu-JwKw-unsplash.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 class="card-title">Rio de Janeiro</h5>
+                            <p class="card-text">Rio de Janeiro - Nestled between lush mountains and beautiful beaches, Rio de Janeiro is known for its vibrant culture, lively samba music, and breathtaking natural scenery. Travelers can soak up the sun on iconic beaches like Copacabana and Ipanema, hike to the summit of Sugarloaf Mountain for panoramic views, and visit the iconic Christ the Redeemer statue.</p>
+                          </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Carnival</li>
+                            <li class="list-group-item">Samba</li>
+                            <li class="list-group-item">Beaches</li>
+                          </ul>
+                          <div class="card-body">
+                            <a href="photogal.html" class="card-link">Gallery</a>
+                            <a href="blog.html" class="card-link">Our blog</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 mt-5">
+                        <div class="card h-100" style="width: 18rem;">
+                          <img src="source/images/steven-wilcox-JMHaGyphpPU-unsplash.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 class="card-title">Bangkok</h5>
+                            <p class="card-text">Bangkok - The capital city of Thailand is a bustling metropolis known for its ornate temples, vibrant street markets, and delicious street food. Visitors can explore the majestic Grand Palace, take a boat ride along the Chao Phraya River, and sample authentic Thai dishes at bustling night markets like Khao San Road.</p>
+                          </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Temples</li>
+                            <li class="list-group-item">Street Food</li>
+                            <li class="list-group-item">Nightlife</li>
+                          </ul>
+                          <div class="card-body">
+                            <a href="photogal.html" class="card-link">Gallery</a>
+                            <a href="blog.html" class="card-link">Our blog</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="hedtext mt-4">
+                    <h2>Questions and answers</h2>
+                    <p>All information you need.</p>
+                  </div>
+
+                  <div class="accordion" id="accordionPanelsStayOpenExample"> <!--Q&A-->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                          What is Byemyek airlines?
+                        </button>
+                      </h2>
+                      <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                        <div class="accordion-body">
+                          Byemyek Airline, based in Belgrade, Serbia, offers a premium flying experience with its state-of-the-art fleet and top-notch services. Renowned for its exceptional customer service and commitment to safety, Byemyek Airline is the preferred choice for travelers seeking comfort and reliability. With a diverse range of destinations both domestic and international, passengers can explore the world with ease and convenience. Whether it's a short-haul business trip or a long-haul vacation, Byemyek Airline ensures a smooth and enjoyable journey from takeoff to landing. Experience unparalleled hospitality and comfort with Byemyek Airline on your next flight adventure.  
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                          What is your baggage allowance policy?
+                        </button>
+                      </h2>
+                      <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                        <div class="accordion-body">
+                          Our baggage allowance policy varies depending on your ticket type and destination. As a general guideline, our economy class passengers are allowed one free checked bag up to 23 kg (50 lbs) and one carry-on bag. Business class passengers typically enjoy higher baggage allowances. Please refer to our website or contact our customer service team for specific details regarding your itinerary.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                          What amenities are offered onboard your flights?
+                        </button>
+                      </h2>
+                      <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                        <div class="accordion-body">
+                          We strive to provide a comfortable and enjoyable travel experience for our passengers. Our amenities may include complimentary meals and beverages, in-flight entertainment, Wi-Fi access (on select flights), comfortable seating with adjustable headrests, and more. Specific amenities may vary depending on the aircraft type and route. Please refer to our website or contact our customer service team for detailed information about amenities offered on your flight.  
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer bg-dark text-light">
+      <div class="container py-4">
+          <div class="row">
+              <div class="col-md-6">
+                  <p class="mb-0">© 2024 Byemyek Airlines</p>
+                  <p class="mb-0">Made by Kurakov Mikhail, student of Singidunum</p>
+              </div>
+              <div class="col-md-6">
+                  <ul class="list-unstyled d-flex justify-content-end mb-0">
+                      <li class="me-3"><a href="index.html" class="text-light">Home</a></li>
+                      <li class="me-3"><a href="aboutus.html" class="text-light">About Us</a></li>
+                      <li class="me-3"><a href="photogal.html" class="text-light">Gallery</a></li>
+                      <li class="me-3"><a href="blog.html" class="text-light">Our Blog</a></li>
+                      <li><a href="portfolio.html" class="text-light">Portfolio</a></li>
+                  </ul>
+                  <ul class="list-unstyled d-flex justify-content-end mt-2 mb-0">
+                    <li class="me-3">Phone: +381-57-2007-179</li>
+                    <li class="me-3">email: byemyekairlines@fly.rs</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+    </footer>
+  
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha384-pXjTrt/PqTWQXHMmf7sBLwsds5J/5Vn5Z3/3j1D1g/W/+OrjSr7vjf1Td/y9O4F3" crossorigin="anonymous"></script> -->
+    <script src="source/scripts/mainscript.js"></script>
+</body>
+</html>
